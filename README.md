@@ -34,6 +34,8 @@ module.exports = {
 };
 
 ```
+## 以下只更新需要改变的内容
+
 
 ## html-webpack-plugin
 ```
@@ -158,6 +160,15 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 ```
 
 ## clean-webpack-plugin
-```
 
+每次编译改变文件的名字，避免浏览器缓存导致客户端不更新，此插件用来清空历史文件
+```
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'js/[name].[hash].js'
+  },
+  const CleanWebpackPlugin = require('clean-webpack-plugin');
+  plugins: [
+    new CleanWebpackPlugin()
+  ]
 ```
