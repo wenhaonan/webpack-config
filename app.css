@@ -1,0 +1,198 @@
+ /* search style */
+ * {
+      margin: 0;
+      padding: 0;
+      font: 12px arial;
+      text-align: center;
+      user-select: none;
+      -ms-user-select: none;
+      -moz-user-select: none;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+    #wrap {
+      position: relative;
+      width: 641px;
+      height: 293px;
+      margin: 60px auto
+    }
+
+    #sc-img {
+      position: absolute;
+      top: 40px;
+      left: 240px;
+    }
+
+    #sc-img img {
+      pointer-events: none;
+      width: 150px;
+      height: 150px
+    }
+
+    #ks {
+      display: flex;
+      position: absolute;
+      width: 584px;
+      bottom: 20px;
+      right: 20px;
+      height: 44px;
+      border-radius: 2px;
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+
+      animation: ksop 1s;
+      -moz-animation: ksop 1s;
+      /* Firefox */
+      -webkit-animation: ksop 1s;
+      /* Safari 和 Chrome */
+      -o-animation: ksop 1s;
+      /* Opera */
+    }
+
+    #ks:hover {
+      box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px rgba(0, 0, 0, 0.08) !important;
+    }
+
+    @keyframes ksop {
+      from {
+        display: none;
+        bottom: 0px;
+      }
+
+      to {
+        display: block;
+        bottom: 20px;
+      }
+    }
+
+    @-moz-keyframes ksop
+
+    /* Firefox */
+      {
+      from {
+        bottom: 0px;
+      }
+
+      to {
+        bottom: 20px;
+      }
+    }
+
+    @-webkit-keyframes ksop
+
+    /* Safari 和 Chrome */
+      {
+      from {
+        bottom: 0px;
+      }
+
+      to {
+        bottom: 20px;
+      }
+    }
+
+    @-o-keyframes ksop
+
+    /* Opera */
+      {
+      from {
+        opacity: 0;
+        bottom: 0px;
+      }
+
+      to {
+        opacity: 1;
+        bottom: 20px;
+      }
+    }
+
+    #input-wrap {
+      display: flex;
+      flex: 1;
+      padding: 5px 8px 0 16px;
+      position: relative;
+    }
+
+    #input-div {
+      display: flex;
+      flex: 1;
+      flex-wrap: wrap;
+      height: 100%;
+    }
+
+    #input-div input {
+      background-color: transparent;
+      border: none;
+      margin: 0;
+      padding: 0;
+      outline: none;
+      display: flex;
+      flex: 100%;
+      font-size: 16px;
+      height: 34px !important;
+      line-height: 35px;
+      text-align: left;
+      font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+    }
+
+    .icon-div {
+      display: flex;
+      flex: 0 0 auto;
+      margin-top: -5px;
+      align-items: stretch;
+      flex-direction: row;
+    }
+
+    .icon-div .icon-wrap {
+      display: flex;
+      flex: 1 0 auto;
+      cursor: pointer;
+      align-items: center;
+      border: 0;
+      background: transparent;
+      outline: none;
+      padding: 0 8px;
+      width: 24px;
+      line-height: 44px;
+    }
+
+    .icon-div .icon-wrap span {
+      background: url(./images/sousuo.png) 0 0 no-repeat;
+      height: 21px;
+      width: 21px;
+      background-size: 21px;
+      vertical-align: middle;
+    }
+
+    .contextMenu {
+      width: 52px;
+      height: 90px;
+      background: #fff;
+      border: none;
+      box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+      border-radius: 4px;
+      position: absolute;
+      display: none;
+      overflow: hidden;
+      z-index: 999;
+      cursor: pointer;
+    }
+
+    .contextMenu div {
+      height: 30px;
+      width: 100%;
+      line-height: 30px;
+    }
+
+    .contextMenuHidd {
+      display: block;
+    }
+
+    .contextMenu div:hover {
+      background: #000;
+      color: #fff;
+    }
